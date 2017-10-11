@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./jquery-1.12.0.min.js"></script>
+	<style>
+		#box{
+			width: 300px;
+			height: 300px;
+			background: black;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+</body>
+<script>
+	var $box = $('#box');
+	$('<div/>',{
+		id:'child1',
+		class:'child1',
+		text:'child1'
+	}).appendTo($box)
+	$('<div/>',{
+		id:'child2',
+		class:'child2',
+		text:'child2'
+	}).appendTo($box)
+</script>
+
+</html>
