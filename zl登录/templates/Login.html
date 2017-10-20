@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html;charset=utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"></link>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>登录</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<style>
+    body{
+        margin-left:auto;
+        margin-right:auto;
+        margin-TOP:100PX;
+        width:20em;
+    }
+</style>
+<body>
+
+<div class="panel-body">
+    <form role="form"  method="POST" th:action="@{/v/userLogin}" th:object="${user}">
+        <div class="form-group">
+            <label for="username">用户名:</label>
+            <input id="username" type="text" class="form-control" placeholder="请输入用户名" required="autofocus" th:field="*{name}"></input>
+        </div>
+
+        <div class="form-group">
+            <label for="password">密码:</label>
+            <input type="password" id="password" class="form-control" placeholder="请输入密码" required="autofocus" th:field="*{password}"></input>
+        </div>
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="checkbox" class="checkbox" value="remember-me">记住登录状态</input>
+            </label>
+        </div>
+
+        <br></br>
+        <button class="btn btn-block btn-primary" type="submit">
+            登录系统
+        </button>
+    </form>
+</div>
+
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
