@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+    <title>丽水学院VR/AR明信片</title>
+    <style>
+        *{margin: 0px;padding: 0px;}
+        body,html{max-width: 100%;}
+        @font-face
+        {
+            font-family: yegenyou;
+            src: url('fonts/yegenyou.ttf');
+                 /*url('aa.eot');  IE9+,可以是具体的实际链接 */
+        }
+		.inner-wrap{width: 80%;margin: 0 auto;position: relative;}
+	
+        ul li{list-style-type: none}
+        a{cursor: pointer;}
+        .outer-wrap{width: 100%;}
+		
+        .menu-wrap{
+            height:69px;
+            background: rgba(0,0,0,.5);
+            color: #ffffff;
+        }
+        .menu-wrap .logo{display:inline-block;width: 59px;height: 49px;margin:10px 0 0 0;float:left;background: url("images/app1-logo-black.png");}
+        .menu-wrap .logo-text{
+            display:inline-block;
+            height: 49px;
+            line-height: 49px;
+            margin: 10px 0 0 10px;
+            float:left;
+            font-size: 24px;            
+            font-family: yegenyou;
+        }
+        .main-content-wrap{display:bold;height:auto}
+        #main_content{
+           /*  background: #ccc; */
+            background-image: url('./images/bg1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+        .main-content .main-content-left{width:45%;float:left; padding:100px 0; }
+        .main-content .main-content-left .demo-code-background{height:314px;width:228px;background: url("images/demo-code-background.png") no-repeat; margin:0 auto}
+        .main-content .main-content-left .demo-code-background img{width:200px}
+		.main-content .main-content-left .demo-code-background .demo-code-img{display:block;padding:35px 0 0 0;margin: 0 0 0 15px;}
+        .main-content .main-content-left .demo-code-background .demo-code-text{text-align: center;font-size: 12px;color: #9fa0a0;line-height: 20px;margin: 10px 0 0 0;}
+        .main-content .main-content-left .download-app{margin: 0 0 0 0;position: relative;}
+        .main-content .main-content-left .download-app ul li a{display: block;width: 178px;height: 59px;margin:30px auto 0;}
+        .main-content .main-content-left .download-app ul li .download-android{background: url("images/download-android.png") no-repeat;}
+        .main-content .main-content-left .download-app ul li .download-ios{background: url("images/download-ios.png") no-repeat;}
+        .main-content .main-content-left .download-app ul li .download-android:hover{background: url("images/download-android-hover.png") no-repeat;}
+        .main-content .main-content-left .download-app ul li .download-ios:hover{background: url("images/download-ios-hover.png") no-repeat;}
+		 ul li img{width:281px;height:500px}
+		 
+        .main-content .main-content-right{float:left;width:46%; }
+        .main-content .main-content-right .iphone-background{width: 338px;height: 663px;overflow:hidden;float:left;background: url("images/iphone.png") no-repeat;}
+        .main-content .main-content-right .iphone-background .iphone-inner-img{float:left;margin: 80px 0 0 32px;}
+        .main-content .main-content-right .android-background{
+            position: relative;
+            left: 50%;
+            width: 350px;
+            height: 663px;
+            margin-left:-175px;
+            overflow:hidden;
+            float:left;
+            background: url("images/android.png") no-repeat;
+            background-position: -9px 1px;
+        }
+        .main-content .main-content-right .android-background .android-inner-img{
+            position: relative;
+            left:35px;
+            margin: 80px 0 0 0;
+            float:left;
+            overflow:hidden;
+        }		
+        .footer-wrap{
+            display: block;height:40px;
+            background: rgba(0,0,0,.5);
+            color: #999;
+        }
+        .footer-wrap .footer{text-align: center;}
+        .footer-wrap .footer p{display: block;text-align: center;margin:0 auto;padding: 10px 0 0 0;}
+    	
+		@media (max-width:480px){
+              .inner-wrap{width: 100%;}
+			  .main-content .main-content-left{margin:0px auto;width:100%; padding:0}
+			  .main-content .main-content-right {margin:0px auto; width:100%; padding:0}
+        }
+	</style>
+</head>
+<body>
+<div id="container" style="position: fixed; width:100%; height:100%;z-index:-100"> 
+    <div id="anitOut"></div>
+</div>
+    <div class="outer-wrap menu-wrap">
+        <div  class="tip-menu-small tip-change-background">
+      
+        </div>
+        <div class="inner-wrap menu">
+            <a class="logo" id="logo"  style=""></a>
+            <span class="logo-text" id="logo_text" style="">丽水学院VR/AR明信片</span>
+        </div>
+    </div>
+    <div class="outer-wrap main-content-wrap" id="main_content">
+        <div class="inner-wrap main-content">
+            <div class="main-content-left">
+                <div class="demo-code-background">
+                    <span class="demo-code-img"><img src="images/demo-code.png" /></span>
+                    <p class="demo-code-text">丽水学院VR/AR明信片APP
+                    </p>
+                </div>
+                <div class="download-app">
+                    <ul>
+                        <li id="download_android"  style="">
+                        <a class="download-android" href="http://downloadpkg.apicloud.com/app/download?path=http://7xybfb.com1.z0.glb.clouddn.com/a51fd41dbe1e8f31362297f7ae8b717c_d"></a></li>
+                        <li id="download_ios"  style="">
+                        <a class="download-ios" href=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-content-right">
+                <div class="iphone-background"  style="display:none;">
+                    <span class="iphone-inner-img" id="slider_iphone">
+					<ul>				
+						<li style="display: none"><img src="images/1 (1).png" /></li>
+						<li style="display: none"><img src="images/1 (2).png" /></li>
+						<li style="display: none"><img src="images/1 (3).png" /></li>
+						<li style="display: none"><img src="images/1 (4).png" /></li>
+						<li style="display: none"><img src="images/1 (5).png" /></li>
+					</ul>
+                      </span>
+                </div>
+                <div class="android-background" style="display: block;">
+                    <span class="android-inner-img" id="slider_android">
+						<ul>				
+							<li style="display: none"><img src="images/b1.png" /></li>
+							<li style="display: none"><img src="images/b2.png" /></li>
+							<li style="display: none"><img src="images/b3.png" /></li>
+							<li style="display: none"><img src="images/b4.png" /></li>
+<!-- 							<li style="display: none"><img src="images/1 (5).png" /></li>
+ -->						</ul>
+                      </span>
+                </div>		
+            </div>
+        </div>
+    </div>
+    <div class="outer-wrap footer-wrap">
+        <div class="inner-wrap footer">
+            <p>丽水学院</p>
+        </div>
+    </div>
+</body>
+<script type="Text/Javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.sudoSlider.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+        function auto_height()
+        {           
+                document.getElementById("main_content").style.height= document.body.scrollHeight+"px";         
+        }
+        auto_height();
+
+
+	   if ($("#slider_android ul li").size()>=2) {
+
+		   $("#slider_android ul li").eq(0).show();
+
+	        var sudoSliderArdroid = $("#slider_android").sudoSlider({
+	            speed:'600',
+	            auto:true,
+	            width:277,
+	            height:493,
+	            continuous:true,
+	            prevNext:false
+	        });
+	   }else if ( $("#slider_android ul li").size()==1 ) {
+		   $("#slider_android ul li").eq(0).show();
+	   }
+	   if ($("#slider_iphone ul li").size()>=2) {
+
+		   $("#slider_iphone ul li").eq(0).show();
+		   
+	        var sudoSliderIphone = $("#slider_iphone").sudoSlider({
+	            speed:'600',
+	            auto:true,
+	            continuous:true,
+	            prevNext:false
+	        });
+	   }else if ( $("#slider_iphone ul li").size()==1 ) {
+		   $("#slider_iphone ul li").eq(0).show();
+	   }	   
+
+		var initMenuBackground = $(".menu-wrap").css('background');
+		var initMenuColor = $(".menu-wrap").css('color');
+		var initMainContentBackground = $(".main-content-wrap").css('background');
+		var initFooterBackground = $(".footer-wrap").css('background');
+		var initFooterColor = $(".footer-wrap").css('color');        
+		var themeStyle0 = {
+				menuBackground : initMenuBackground,
+				menuColor : initMenuColor,
+				mainContentBackground : initMainContentBackground,
+				footerBackground : initFooterBackground,
+				footerColor : initFooterColor
+			}
+			var themeStyle1 = {
+				menuBackground : '#f6f7ff',
+				menuColor : '#656565',
+				mainContentBackground : '#626eb3',
+				footerBackground :'#f6f7ff',
+				footerColor :'#9297b6'
+			}
+			var themeStyle2 = {
+				menuBackground : '#636a97',
+				menuColor : '#ffffff',
+				mainContentBackground : '#777eab',
+				footerBackground :'#636a97',
+				footerColor :'#9297b6'
+			}
+			var themeStyle3 = {
+				menuBackground : '#49505f',
+				menuColor : '#ffffff',
+				mainContentBackground : 'url("images/1-4background.png") no-repeat',
+				footerBackground :'#272b3c',
+				footerColor :'#9fa0a0'
+			}
+
+			var changeTheme = function(themeStyle){
+				//$(".menu-wrap").css({'background':themeStyle.menuBackground,'color':themeStyle.menuColor});
+				//$(".main-content-wrap").css({'background':themeStyle.mainContentBackground});
+				//$(".footer-wrap").css({'background':themeStyle.footerBackground,'color':themeStyle.footerColor});
+			}
+		
+			var userDefaultTheme=0;
+			
+			switch (userDefaultTheme){
+				case 1:
+					userDefaultTheme = themeStyle1;
+					break;
+				case 2:
+					userDefaultTheme = themeStyle2;
+					break;
+				case 3:
+					userDefaultTheme = themeStyle3;
+					break;
+				default :
+					userDefaultTheme = themeStyle0;
+					break;
+			}
+			changeTheme(userDefaultTheme);
+
+            //ios下载按钮
+            $('.download-ios').click(function(){
+                alert('app还未在苹果商店上架,敬请期待...');
+            })
+    });    
+</script>
+
+</html>
